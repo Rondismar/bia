@@ -8,6 +8,7 @@ import Tasks from "./components/Tasks.jsx";
 import AddTask from "./components/AddTask.jsx";
 import Modal from "./components/Modal.jsx";
 import About from "./components/About.jsx";
+import VersionPage from "./components/VersionPage.jsx";
 import DebugLogs from "./components/DebugLogs.jsx";
 
 const apiUrl = import.meta.env.VITE_API_URL || "http://localhost:8080";
@@ -244,6 +245,7 @@ function AppContent() {
 
           <Routes>
             <Route path="/" element={<HomePage />} />
+            <Route path="/versao" element={<VersionPage />} />
             <Route path="/about" element={<About />} />
           </Routes>
           <Footer />

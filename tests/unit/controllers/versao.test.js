@@ -5,6 +5,7 @@ describe('Versao Controller', () => {
   const req = {};
   const res = {
     json: jest.fn(),
+    send: jest.fn(),
   };
 
   beforeEach(() => {
@@ -46,5 +47,13 @@ describe('Versao Controller', () => {
     const chamada = res.json.mock.calls[0][0];
     expect(chamada).toHaveProperty('app', 'BIA');
     expect(chamada).toHaveProperty('versao', '2.0.0');
+  });
+
+  test('get deve usar res.json e NÃO chamar res.send', async () => {
+    const { get } = versaoController();
+    await get(req, res);
+
+    expect(res.json).toHaveBeenCalledTimes(1);
+    expect(res.send).not.toHaveBeenCalled();
   });
 });
