@@ -4,43 +4,47 @@ describe('Versao Controller', () => {
   // Mock para simular o objeto req e res
   const req = {};
   const res = {
-    send: jest.fn(),
+    json: jest.fn(),
   };
 
   beforeEach(() => {
     jest.clearAllMocks();
+    delete process.env.VERSAO_API;
   });
 
-  test('get deve retornar a string de resposta correta', () => {
-    // Chama a função retornada pelo controller para obter o objeto controller
+  test('get deve retornar JSON com os campos app e versao', async () => {
     const { get } = versaoController();
-    // Chama o método get do objeto controller
-    get(req, res);
+    await get(req, res);
 
-    expect(res.send).toHaveBeenCalledWith('Bia 4.3.0');
+    expect(res.json).toHaveBeenCalledWith({ app: 'BIA', versao: '4.3.0' });
   });
 
-  test('get deve retornar a string de resposta correta quando VERSAO_API não está definido', () => {
-    // Simula o cenário onde VERSAO_API não está definido
+  test('get deve retornar versao "4.3.0" como fallback quando VERSAO_API não está definido', async () => {
     delete process.env.VERSAO_API;
 
-    // Chama a função retornada pelo controller para obter o objeto controller
     const { get } = versaoController();
-    // Chama o método get do objeto controller
-    get(req, res);
+    await get(req, res);
 
-    expect(res.send).toHaveBeenCalledWith('Bia 4.3.0');
+    expect(res.json).toHaveBeenCalledWith({ app: 'BIA', versao: '4.3.0' });
   });
 
-  test('get deve retornar a string de resposta correta quando VERSAO_API está definido', () => {
-    // Simula o cenário onde VERSAO_API está definido
+  test('get deve retornar o valor de VERSAO_API quando a variável de ambiente está definida', async () => {
     process.env.VERSAO_API = '1.0.0';
 
-    // Chama a função retornada pelo controller para obter o objeto controller
     const { get } = versaoController();
-    // Chama o método get do objeto controller
-    get(req, res);
+    await get(req, res);
 
-    expect(res.send).toHaveBeenCalledWith('Bia 1.0.0');
+    expect(res.json).toHaveBeenCalledWith({ app: 'BIA', versao: '1.0.0' });
+  });
+
+  test('get deve sempre retornar o campo app com valor "BIA"', async () => {
+    process.env.VERSAO_API = '2.0.0';
+
+    const { get } = versaoController();
+    await get(req, res);
+
+    const chamada = res.json.mock.calls[0][0];
+    expect(chamada).toHaveProperty('app', 'BIA');
+    expect(chamada).toHaveProperty('versao', '2.0.0');
   });
 });
