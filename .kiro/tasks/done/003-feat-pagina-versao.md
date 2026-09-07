@@ -1,7 +1,7 @@
 # [003] feat: Página dedicada de Informações de Versão
 
 ## Descrição
-Criar uma página dedicada de "Versão" acessível via aba de navegação no header, exibindo informações detalhadas da API, do ambiente e do cliente (browser). A bolinha verde no header permanece como indicador de status, mas o detalhamento das informações migra do tooltip para essa nova página.
+Criar uma página dedicada de "Versão" acessível via aba de navegação no header, exibindo informações detalhadas da API, do ambiente e do cliente (browser). A bolinha verde no header permanece como indicador de status, but o detalhamento das informações migra do tooltip para essa nova página.
 
 ## Contexto
 O cliente identificou que o tooltip da bolinha verde oferece uma experiência limitada. A solicitação é criar uma tela completa de diagnóstico/versão, organizada em três cards, com um botão de atualização manual.
@@ -78,32 +78,32 @@ Adicionar uma barra de navegação com 3 abas logo abaixo do título/controles:
 ## Critérios de Aceite
 
 ### Navegação
-- [ ] A barra de abas (Tarefas / Versão / Sobre) aparece no header abaixo dos controles
-- [ ] Clicar em "Versão" navega para `/versao` sem recarregar a página
-- [ ] A aba ativa tem destaque visual claro
+- [x] A barra de abas (Tarefas / Versão / Sobre) aparece no header abaixo dos controles
+- [x] Clicar em "Versão" navega para `/versao` sem recarregar a página
+- [x] A aba ativa tem destaque visual claro
 
 ### Card Status da API
-- [ ] Exibe badge `🟢 Online` quando `GET /api/versao` responde com sucesso
-- [ ] Exibe badge `🔴 Offline` quando o endpoint não responde
-- [ ] Exibe o campo `versao` retornado pelo endpoint
-- [ ] Exibe a URL da API
-- [ ] Exibe o timestamp da última verificação no formato local (`toLocaleString()`)
+- [x] Exibe badge `🟢 Online` quando `GET /api/versao` responde com sucesso
+- [x] Exibe badge `🔴 Offline` quando o endpoint não responde
+- [x] Exibe o campo `versao` retornado pelo endpoint
+- [x] Exibe a URL da API
+- [x] Exibe o timestamp da última verificação no formato local (`toLocaleString()`)
 
 ### Card Ambiente
-- [ ] Exibe Tipo, Protocolo, Host, Porta e URL Completa com base em `window.location`
-- [ ] O badge reflete corretamente o tipo de ambiente detectado
+- [x] Exibe Tipo, Protocolo, Host, Porta e URL Completa com base em `window.location`
+- [x] O badge reflete corretamente o tipo de ambiente detectado
 
 ### Card Cliente
-- [ ] Exibe Aplicação, Framework, Navegador e Plataforma
-- [ ] Badge `🟢 Ativo` sempre presente
+- [x] Exibe Aplicação, Framework, Navegador e Plataforma
+- [x] Badge `🟢 Ativo` sempre presente
 
 ### Botão Atualizar
-- [ ] Ao clicar em "Atualizar", os dados do Card 1 são recarregados (nova chamada ao endpoint)
-- [ ] O timestamp de "Última verificação" é atualizado
+- [x] Ao clicar em "Atualizar", os dados do Card 1 são recarregados (nova chamada ao endpoint)
+- [x] O timestamp de "Última verificação" é atualizado
 
 ### Visual
-- [ ] Layout consistente com o tema dark/light já existente (usa variáveis CSS do projeto)
-- [ ] Os cards seguem o padrão visual da referência: fundo levemente diferenciado, borda sutil, campos em negrito + valor
+- [x] Layout consistente com o tema dark/light já existente (usa variáveis CSS do projeto)
+- [x] Os cards seguem o padrão visual da referência: fundo levemente diferenciado, borda sutil, campos em negrito + valor
 
 ## Tipo
 `feat`
