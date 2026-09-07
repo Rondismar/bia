@@ -84,15 +84,15 @@ P (Pequena) — alteração pontual em 2 linhas do componente `AddTask.jsx`
 
 Quando o agent `dev` sinalizar conclusão, o PO deverá:
 
-- [ ] Validar se todos os critérios de aceite foram atendidos
-- [ ] Confirmar que todos os itens do checklist de implementação estão marcados
-- [ ] Revisar o Pull Request e aprovar o merge para `ia-main`
-- [ ] Mover este arquivo de `doing/` para `done/` (`Desafio-labs-3.0/bia/.kiro/tasks/done/`)
-- [ ] Fazer commit e push final confirmando o encerramento da task
-- [ ] Informar ao usuário que a task **004** está **concluída** ✅
+- [x] Validar se todos os critérios de aceite foram atendidos
+- [x] Confirmar que todos os itens do checklist de implementação estão marcados
+- [x] Revisar o Pull Request e aprovar o merge para `ia-main`
+- [x] Mover este arquivo de `doing/` para `done/` (`Desafio-labs-3.0/bia/.kiro/tasks/done/`)
+- [x] Fazer commit e push final confirmando o encerramento da task
+- [x] Informar ao usuário que a task **004** está **concluída** ✅
 
 ---
 
 ## Status
 
-> 🔄 **Retornada ao dev** — o agent `dev` deve revisar a task, marcar todos os itens do checklist de implementação e dos critérios de aceite, e então sinalizar ao PO para validação.
+> ✅ **Concluída** — task encerrada pelo PO em 07/09/2026.
