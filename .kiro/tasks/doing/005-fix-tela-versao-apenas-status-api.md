@@ -5,9 +5,10 @@
 - **Nome do branch:** `005-fix-tela-versao-apenas-status-api`
 - **Agent responsável:** `dev` (`.kiro/agents/dev.json`)
 
-## Instruções de Início para o Agent
-1. Verificar se está na branch `ia-main`. Caso contrário, informar ao usuário e aguardar autorização para retornar.
-2. Após autorização: mover este arquivo para a pasta `doing/`, fazer commit e push em `ia-main`.
+## Instruções de Início para o Agent (dev)
+
+1. Verificar se está na branch `ia-main`. Caso contrário, informar ao usuário e **aguardar autorização** para retornar antes de prosseguir.
+2. Após autorização: mover este arquivo para a pasta `doing/` (`Desafio-labs-3.0/bia/.kiro/tasks/doing`), fazer **commit e push em `ia-main`**.
 3. Criar o branch `005-fix-tela-versao-apenas-status-api` a partir de `ia-main` e iniciar a implementação.
 
 ---
@@ -21,13 +22,13 @@ A tela resultante deve ser semelhante à imagem `img/tela-de-versão-2.0.png`, p
 ---
 
 ## Critérios de Aceite
-- [ ] A tela de Versão exibe **somente** o card "Status da API".
-- [ ] Os cards "Ambiente" e "Cliente" são **removidos** do componente.
-- [ ] O cabeçalho da página (título "Informações de Versão" + botão "🔄 Atualizar") é **mantido**.
-- [ ] O card de Status da API continua exibindo: Versão, URL e Última verificação.
-- [ ] O badge de status (Online / Offline / Verificando…) continua funcionando corretamente.
-- [ ] A estrutura de classes CSS (`version-card`, `version-card-header`, `version-card-body`, `version-field`, etc.) é **mantida** para não quebrar estilos.
-- [ ] Nenhuma outra tela ou funcionalidade é afetada.
+- [x] A tela de Versão exibe **somente** o card "Status da API".
+- [x] Os cards "Ambiente" e "Cliente" são **removidos** do componente.
+- [x] O cabeçalho da página (título "Informações de Versão" + botão "🔄 Atualizar") é **mantido**.
+- [x] O card de Status da API continua exibindo: Versão, URL e Última verificação.
+- [x] O badge de status (Online / Offline / Verificando…) continua funcionando corretamente.
+- [x] A estrutura de classes CSS (`version-card`, `version-card-header`, `version-card-body`, `version-field`, etc.) é **mantida** para não quebrar estilos.
+- [x] Nenhuma outra tela ou funcionalidade é afetada.
 
 ---
 
@@ -65,5 +66,41 @@ A tela resultante deve ser semelhante à imagem `img/tela-de-versão-2.0.png`, p
 ## Estimativa
 P (Pequena) — remoção de blocos JSX e helpers órfãos em um único arquivo.
 
+---
+
+## Checklist de Implementação — Agent: dev
+
+- [x] Verificar branch atual (`ia-main`) e criar branch `005-fix-tela-versao-apenas-status-api`
+- [x] Mover este arquivo para `doing/`, commit e push em `ia-main`
+- [x] Verificar se `detectEnvironment` ou `extractBrowser` são importadas em outros componentes
+- [x] Remover bloco `Card 2 — Ambiente` de `VersionPage.jsx`
+- [x] Remover bloco `Card 3 — Cliente` de `VersionPage.jsx`
+- [x] Remover helpers órfãos (`detectEnvironment`, `extractBrowser`, `envType`, `envBadge`, `envBadgeMap`, `browser`, `loc`)
+- [x] Verificar que o cabeçalho (título + botão Atualizar) permanece intacto
+- [x] Verificar que o Card 1 — Status da API permanece funcional (badge + campos)
+- [x] Verificar que nenhuma outra tela foi afetada
+- [x] Executar a aplicação localmente e validar visualmente a tela de Versão
+- [x] Fazer commit e push no branch `005-fix-tela-versao-apenas-status-api`
+- [ ] Abrir Pull Request de `005-fix-tela-versao-apenas-status-api` → `ia-main`
+- [x] **Informar ao PO que a implementação está concluída e a task pode ser encerrada**
+
+---
+
+## Encerramento — Responsabilidade do PO
+
+> ⚠️ **Somente o PO realiza o encerramento da task.**
+
+Quando o agent `dev` sinalizar conclusão, o PO deverá:
+
+- [ ] Validar se todos os critérios de aceite foram atendidos
+- [ ] Confirmar que todos os itens do checklist de implementação estão marcados
+- [ ] Revisar o Pull Request e aprovar o merge para `ia-main`
+- [ ] Mover este arquivo de `doing/` para `done/` (`Desafio-labs-3.0/bia/.kiro/tasks/done/`)
+- [ ] Fazer commit e push final confirmando o encerramento da task
+- [ ] Informar ao usuário que a task **005** está **concluída** ✅
+
+---
+
 ## Status
-- [ ] To Do
+
+> ✅ **Implementação concluída pelo agent `dev`** — aguardando validação e encerramento pelo PO
