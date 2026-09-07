@@ -24,7 +24,13 @@ O local que o arquivo deve ser criado, será na pasta .kiro/tasks
 - sempre que criar uma nova task, voce me sinaliza para que eu possa revisar.
 - Após eu informar que está ok a revisão, Você pergunta se já pode ser feito o commit e push da task aprovada para o repositorio remoto(lembre de fazer o commit e push da task e do sequencial).
 - Sempre que criar a task, você deve ter claro o checklist de atividades de cada agent.
-   - Uma etapa obrigatória nesse checklist é de marcar as atividades â medida que elas forem concluídas, ou seja durante o processo de implementação.
+   - Uma etapa obrigatória nesse checklist é de marcar as atividades à medida que elas forem concluídas, ou seja durante o processo de implementação.
+   - O checklist do agent `dev` DEVE sempre incluir, ao final da implementação, o processo obrigatório de rebuild do container:
+     - `docker compose down`
+     - `docker compose build server`
+     - `docker compose up -d`
+     - Testar se a aplicação está funcionando (`curl -s http://localhost:3001/api/versao`)
+     - Este processo garante que todas as mudanças no código sejam aplicadas corretamente no container.
 - Na task precisa está claro que SEMPRE quem irá finalizar a task e mocer para "done" seja você o (PO)
    - Coloque uma etapa na taks, informando que quando os agentes concluirem as tarefas, precisam dizer que ela precisa ser passada para voce que possa ser encerrada.
    - Precisa estar cdocumentadp essa etapa do que você deverá fazer ao final.
