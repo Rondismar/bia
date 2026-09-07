@@ -29,14 +29,14 @@ O dev iniciou a task 006 sem executar `git pull origin ia-main`, obtendo uma ver
 ---
 
 ## Critérios de Aceite
-- [ ] A tela de Versão exibe **somente** o card "Status da API".
-- [ ] Os cards "Ambiente" e "Cliente" são **removidos** do componente.
-- [ ] O cabeçalho da página (título "Informações de Versão" + botão "🔄 Atualizar") é **mantido**.
-- [ ] O card de Status da API continua exibindo: Versão, URL e Última verificação.
-- [ ] O badge de status (Online / Offline / Verificando…) continua funcionando corretamente.
-- [ ] As classes CSS (`version-card`, `version-card-header`, `version-card-body`, `version-field`) são **mantidas**.
-- [ ] O checkbox "Importante" continua marcado por padrão no formulário de cadastro (task 006 não deve ser desfeita).
-- [ ] Nenhuma outra tela ou funcionalidade é afetada.
+- [x] A tela de Versão exibe **somente** o card "Status da API".
+- [x] Os cards "Ambiente" e "Cliente" são **removidos** do componente.
+- [x] O cabeçalho da página (título "Informações de Versão" + botão "🔄 Atualizar") é **mantido**.
+- [x] O card de Status da API continua exibindo: Versão, URL e Última verificação.
+- [x] O badge de status (Online / Offline / Verificando…) continua funcionando corretamente.
+- [x] As classes CSS (`version-card`, `version-card-header`, `version-card-body`, `version-field`) são **mantidas**.
+- [x] O checkbox "Importante" continua marcado por padrão no formulário de cadastro (task 006 não deve ser desfeita).
+- [x] Nenhuma outra tela ou funcionalidade é afetada.
 
 ---
 
@@ -73,25 +73,25 @@ P (Pequena) — remoção de blocos JSX e helpers órfãos em um único arquivo.
 
 ## Checklist de Implementação — Agent: dev
 
-- [ ] **OBRIGATÓRIO INÍCIO:** `git checkout ia-main` e `git pull origin ia-main`
-- [ ] Confirmar que está na versão mais recente do `ia-main` antes de criar o branch
-- [ ] Criar branch `007-fix-regressao-versao-apenas-status-api` a partir de `ia-main`
-- [ ] Mover este arquivo para `doing/`, commit e push em `ia-main`
-- [ ] Remover funções `detectEnvironment` e `extractBrowser` de `VersionPage.jsx`
-- [ ] Remover derivações órfãs: `envType`, `envBadge`, `envBadgeMap`, `browser`, `loc`
-- [ ] Remover bloco JSX `Card 2 — Ambiente` de `VersionPage.jsx`
-- [ ] Remover bloco JSX `Card 3 — Cliente` de `VersionPage.jsx`
-- [ ] Verificar que cabeçalho e Card 1 — Status da API permanecem intactos
-- [ ] Verificar que `AddTask.jsx` mantém `useState(true)` e `setImportante(true)`
-- [ ] Verificar que nenhum outro arquivo foi afetado
-- [ ] **OBRIGATÓRIO FIM** — Executar rebuild do container:
-  - [ ] `docker compose down`
-  - [ ] `docker compose build server`
-  - [ ] `docker compose up -d`
-  - [ ] Testar aplicação: `curl -s http://localhost:3001/api/versao`
-- [ ] Fazer commit e push no branch `007-fix-regressao-versao-apenas-status-api`
-- [ ] Abrir Pull Request de `007-fix-regressao-versao-apenas-status-api` → `ia-main`
-- [ ] **Informar ao PO que a implementação está concluída e a task pode ser encerrada**
+- [x] **OBRIGATÓRIO INÍCIO:** `git checkout ia-main` e `git pull origin ia-main`
+- [x] Confirmar que está na versão mais recente do `ia-main` antes de criar o branch
+- [x] Criar branch `007-fix-regressao-versao-apenas-status-api` a partir de `ia-main`
+- [x] Mover este arquivo para `doing/`, commit e push em `ia-main`
+- [x] Remover funções `detectEnvironment` e `extractBrowser` de `VersionPage.jsx`
+- [x] Remover derivações órfãs: `envType`, `envBadge`, `envBadgeMap`, `browser`, `loc`
+- [x] Remover bloco JSX `Card 2 — Ambiente` de `VersionPage.jsx`
+- [x] Remover bloco JSX `Card 3 — Cliente` de `VersionPage.jsx`
+- [x] Verificar que cabeçalho e Card 1 — Status da API permanecem intactos
+- [x] Verificar que `AddTask.jsx` mantém `useState(true)` e `setImportante(true)`
+- [x] Verificar que nenhum outro arquivo foi afetado
+- [x] **OBRIGATÓRIO FIM** — Executar rebuild do container:
+  - [x] `docker compose down`
+  - [x] `docker compose build server`
+  - [x] `docker compose up -d`
+  - [x] Testar aplicação: `curl -s http://localhost:3001/api/versao`
+- [x] Fazer commit e push no branch `007-fix-regressao-versao-apenas-status-api`
+- [x] Abrir Pull Request de `007-fix-regressao-versao-apenas-status-api` → `ia-main`
+- [x] **Informar ao PO que a implementação está concluída e a task pode ser encerrada**
 
 ---
 
@@ -112,4 +112,4 @@ Quando o agent `dev` sinalizar conclusão, o PO deverá:
 
 ## Status
 
-> 📋 **Aguardando revisão do PO** — task criada, pendente de aprovação para iniciar.
+> ✅ **Implementação concluída** — Todos os itens do checklist estão marcados. Rebuild executado com sucesso: `curl -s http://localhost:3001/api/versao` → `{"app":"BIA","versao":"4.3.0"}`. PR aberto: `007-fix-regressao-versao-apenas-status-api` → `ia-main`. Aguardando validação e encerramento pelo PO.
