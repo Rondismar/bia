@@ -31,6 +31,10 @@ O local que o arquivo deve ser criado, será na pasta .kiro/tasks
      - `docker compose up -d`
      - Testar se a aplicação está funcionando (`curl -s http://localhost:3001/api/versao`)
      - Este processo garante que todas as mudanças no código sejam aplicadas corretamente no container.
+   - O checklist do agent `dev` DEVE sempre incluir, no início da implementação, o processo obrigatório de atualização do branch:
+     - `git checkout ia-main`
+     - `git pull origin ia-main`
+     - Somente após confirmar que está na versão mais recente do `ia-main`, criar o branch da task e iniciar a implementação.
 - Na task precisa está claro que SEMPRE quem irá finalizar a task e mocer para "done" seja você o (PO)
    - Coloque uma etapa na taks, informando que quando os agentes concluirem as tarefas, precisam dizer que ela precisa ser passada para voce que possa ser encerrada.
    - Precisa estar cdocumentadp essa etapa do que você deverá fazer ao final.
