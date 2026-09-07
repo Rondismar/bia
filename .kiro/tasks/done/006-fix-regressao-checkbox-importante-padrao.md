@@ -26,11 +26,11 @@ O branch `005-fix-tela-versao-apenas-status-api` foi criado a partir de `ia-main
 ---
 
 ## Critérios de Aceite
-- [ ] Ao abrir o formulário de cadastro de tarefa, o checkbox "Importante" deve estar marcado por padrão.
-- [ ] Após o envio bem-sucedido do formulário, o checkbox deve retornar ao estado marcado (não desmarcado).
-- [ ] O comportamento de marcar/desmarcar manualmente deve continuar funcionando normalmente.
-- [ ] Nenhuma outra funcionalidade do formulário deve ser afetada.
-- [ ] A funcionalidade da tela de Versão (task 005) deve permanecer intacta.
+- [x] Ao abrir o formulário de cadastro de tarefa, o checkbox "Importante" deve estar marcado por padrão.
+- [x] Após o envio bem-sucedido do formulário, o checkbox deve retornar ao estado marcado (não desmarcado).
+- [x] O comportamento de marcar/desmarcar manualmente deve continuar funcionando normalmente.
+- [x] Nenhuma outra funcionalidade do formulário deve ser afetada.
+- [x] A funcionalidade da tela de Versão (task 005) deve permanecer intacta.
 
 ---
 
@@ -71,18 +71,18 @@ P (Pequena) — correção pontual em 2 linhas do componente `AddTask.jsx`
 
 ## Checklist de Implementação — Agent: dev
 
-- [ ] Verificar branch atual (`ia-main`) e criar branch `006-fix-regressao-checkbox-importante-padrao`
-- [ ] Mover este arquivo para `doing/`, commit e push em `ia-main`
-- [ ] Alterar `useState(false)` para `useState(true)` no estado inicial de `importante` em `AddTask.jsx`
-- [ ] Alterar `setImportante(false)` para `setImportante(true)` no reset pós-envio em `AddTask.jsx`
-- [ ] Verificar que `VersionPage.jsx` permanece intacto
-- [ ] Verificar que nenhum outro arquivo foi afetado
-- [ ] Testar abertura do formulário — checkbox deve iniciar marcado
-- [ ] Testar envio do formulário — checkbox deve voltar marcado após reset
-- [ ] Testar marcação/desmarcação manual — deve continuar funcionando normalmente
-- [ ] Fazer commit e push no branch `006-fix-regressao-checkbox-importante-padrao`
-- [ ] Abrir Pull Request de `006-fix-regressao-checkbox-importante-padrao` → `ia-main`
-- [ ] **Informar ao PO que a implementação está concluída e a task pode ser encerrada**
+- [x] Verificar branch atual (`ia-main`) e criar branch `006-fix-regressao-checkbox-importante-padrao`
+- [x] Mover este arquivo para `doing/`, commit e push em `ia-main`
+- [x] Alterar `useState(false)` para `useState(true)` no estado inicial de `importante` em `AddTask.jsx`
+- [x] Alterar `setImportante(false)` para `setImportante(true)` no reset pós-envio em `AddTask.jsx`
+- [x] Verificar que `VersionPage.jsx` permanece intacto
+- [x] Verificar que nenhum outro arquivo foi afetado
+- [x] Testar abertura do formulário — checkbox deve iniciar marcado
+- [x] Testar envio do formulário — checkbox deve voltar marcado após reset
+- [x] Testar marcação/desmarcação manual — deve continuar funcionando normalmente
+- [x] Fazer commit e push no branch `006-fix-regressao-checkbox-importante-padrao`
+- [x] Abrir Pull Request de `006-fix-regressao-checkbox-importante-padrao` → `ia-main`
+- [x] **Informar ao PO que a implementação está concluída e a task pode ser encerrada**
 
 ---
 
@@ -92,15 +92,15 @@ P (Pequena) — correção pontual em 2 linhas do componente `AddTask.jsx`
 
 Quando o agent `dev` sinalizar conclusão, o PO deverá:
 
-- [ ] Validar se todos os critérios de aceite foram atendidos
-- [ ] Confirmar que todos os itens do checklist de implementação estão marcados
-- [ ] Revisar o Pull Request e aprovar o merge para `ia-main`
-- [ ] Mover este arquivo de `doing/` para `done/` (`Desafio-labs-3.0/bia/.kiro/tasks/done/`)
-- [ ] Fazer commit e push final confirmando o encerramento da task
-- [ ] Informar ao usuário que a task **006** está **concluída** ✅
+- [x] Validar se todos os critérios de aceite foram atendidos
+- [x] Confirmar que todos os itens do checklist de implementação estão marcados
+- [x] Revisar o Pull Request e aprovar o merge para `ia-main`
+- [x] Mover este arquivo de `doing/` para `done/` (`Desafio-labs-3.0/bia/.kiro/tasks/done/`)
+- [x] Fazer commit e push final confirmando o encerramento da task
+- [x] Informar ao usuário que a task **006** está **concluída** ✅
 
 ---
 
 ## Status
 
-> 📋 **Aguardando revisão do PO** — task criada, pendente de aprovação para iniciar.
+> ✅ **Concluída** — task encerrada pelo PO em 07/09/2026.
