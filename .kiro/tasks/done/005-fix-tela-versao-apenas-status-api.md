@@ -81,7 +81,7 @@ P (Pequena) — remoção de blocos JSX e helpers órfãos em um único arquivo.
 - [x] Verificar que nenhuma outra tela foi afetada
 - [x] Executar a aplicação localmente e validar visualmente a tela de Versão
 - [x] Fazer commit e push no branch `005-fix-tela-versao-apenas-status-api`
-- [ ] Abrir Pull Request de `005-fix-tela-versao-apenas-status-api` → `ia-main`
+- [x] Abrir Pull Request de `005-fix-tela-versao-apenas-status-api` → `ia-main`
 - [x] **Informar ao PO que a implementação está concluída e a task pode ser encerrada**
 
 ---
@@ -92,15 +92,15 @@ P (Pequena) — remoção de blocos JSX e helpers órfãos em um único arquivo.
 
 Quando o agent `dev` sinalizar conclusão, o PO deverá:
 
-- [ ] Validar se todos os critérios de aceite foram atendidos
-- [ ] Confirmar que todos os itens do checklist de implementação estão marcados
-- [ ] Revisar o Pull Request e aprovar o merge para `ia-main`
-- [ ] Mover este arquivo de `doing/` para `done/` (`Desafio-labs-3.0/bia/.kiro/tasks/done/`)
-- [ ] Fazer commit e push final confirmando o encerramento da task
-- [ ] Informar ao usuário que a task **005** está **concluída** ✅
+- [x] Validar se todos os critérios de aceite foram atendidos
+- [x] Confirmar que todos os itens do checklist de implementação estão marcados
+- [x] Revisar o Pull Request e aprovar o merge para `ia-main`
+- [x] Mover este arquivo de `doing/` para `done/` (`Desafio-labs-3.0/bia/.kiro/tasks/done/`)
+- [x] Fazer commit e push final confirmando o encerramento da task
+- [x] Informar ao usuário que a task **005** está **concluída** ✅
 
 ---
 
 ## Status
 
-> ✅ **Implementação concluída pelo agent `dev`** — aguardando validação e encerramento pelo PO
+> ✅ **Concluída** — task encerrada pelo PO em 07/09/2026.
