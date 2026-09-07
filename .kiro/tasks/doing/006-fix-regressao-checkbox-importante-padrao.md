@@ -80,9 +80,14 @@ P (Pequena) — correção pontual em 2 linhas do componente `AddTask.jsx`
 - [x] Testar abertura do formulário — checkbox deve iniciar marcado
 - [x] Testar envio do formulário — checkbox deve voltar marcado após reset
 - [x] Testar marcação/desmarcação manual — deve continuar funcionando normalmente
+- [ ] **OBRIGATÓRIO** — Executar rebuild do container:
+  - [ ] `docker compose down`
+  - [ ] `docker compose build server`
+  - [ ] `docker compose up -d`
+  - [ ] Testar aplicação: `curl -s http://localhost:3001/api/versao`
 - [x] Fazer commit e push no branch `006-fix-regressao-checkbox-importante-padrao`
 - [x] Abrir Pull Request de `006-fix-regressao-checkbox-importante-padrao` → `ia-main`
-- [x] **Informar ao PO que a implementação está concluída e a task pode ser encerrada**
+- [ ] **Informar ao PO que a implementação está concluída e a task pode ser encerrada**
 
 ---
 
@@ -92,15 +97,15 @@ P (Pequena) — correção pontual em 2 linhas do componente `AddTask.jsx`
 
 Quando o agent `dev` sinalizar conclusão, o PO deverá:
 
-- [x] Validar se todos os critérios de aceite foram atendidos
-- [x] Confirmar que todos os itens do checklist de implementação estão marcados
-- [x] Revisar o Pull Request e aprovar o merge para `ia-main`
-- [x] Mover este arquivo de `doing/` para `done/` (`Desafio-labs-3.0/bia/.kiro/tasks/done/`)
-- [x] Fazer commit e push final confirmando o encerramento da task
-- [x] Informar ao usuário que a task **006** está **concluída** ✅
+- [ ] Validar se todos os critérios de aceite foram atendidos
+- [ ] Confirmar que todos os itens do checklist de implementação estão marcados
+- [ ] Revisar o Pull Request e aprovar o merge para `ia-main`
+- [ ] Mover este arquivo de `doing/` para `done/` (`Desafio-labs-3.0/bia/.kiro/tasks/done/`)
+- [ ] Fazer commit e push final confirmando o encerramento da task
+- [ ] Informar ao usuário que a task **006** está **concluída** ✅
 
 ---
 
 ## Status
 
-> ✅ **Concluída** — task encerrada pelo PO em 07/09/2026.
+> 🔄 **Reaberta** — etapas obrigatórias de rebuild do container não foram executadas. O agent `dev` deve executar o rebuild, marcar os itens pendentes e sinalizar ao PO para nova validação.
