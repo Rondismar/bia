@@ -80,14 +80,14 @@ P (Pequena) — correção pontual em 2 linhas do componente `AddTask.jsx`
 - [x] Testar abertura do formulário — checkbox deve iniciar marcado
 - [x] Testar envio do formulário — checkbox deve voltar marcado após reset
 - [x] Testar marcação/desmarcação manual — deve continuar funcionando normalmente
-- [ ] **OBRIGATÓRIO** — Executar rebuild do container:
-  - [ ] `docker compose down`
-  - [ ] `docker compose build server`
-  - [ ] `docker compose up -d`
-  - [ ] Testar aplicação: `curl -s http://localhost:3001/api/versao`
+- [x] **OBRIGATÓRIO** — Executar rebuild do container:
+  - [x] `docker compose down`
+  - [x] `docker compose build server`
+  - [x] `docker compose up -d`
+  - [x] Testar aplicação: `curl -s http://localhost:3001/api/versao`
 - [x] Fazer commit e push no branch `006-fix-regressao-checkbox-importante-padrao`
 - [x] Abrir Pull Request de `006-fix-regressao-checkbox-importante-padrao` → `ia-main`
-- [ ] **Informar ao PO que a implementação está concluída e a task pode ser encerrada**
+- [x] **Informar ao PO que a implementação está concluída e a task pode ser encerrada**
 
 ---
 
@@ -108,4 +108,4 @@ Quando o agent `dev` sinalizar conclusão, o PO deverá:
 
 ## Status
 
-> 🔄 **Reaberta** — etapas obrigatórias de rebuild do container não foram executadas. O agent `dev` deve executar o rebuild, marcar os itens pendentes e sinalizar ao PO para nova validação.
+> ✅ **Concluída** — Rebuild do container executado com sucesso. `curl -s http://localhost:3001/api/versao` retornou `{"app":"BIA","versao":"4.3.0"}`. Todos os itens do checklist de implementação estão marcados. Aguardando validação e encerramento pelo PO.
