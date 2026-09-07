@@ -1,4 +1,4 @@
-- Sempre que voce estiver implementando uma task, você deve ir gradualmente marcando as etapas como concluidas. 
+- Sempre que voce estiver implementando uma task, você deve ir gradualmente marcando as etapas do ckeckelist da task como concluidas. 
 - Sempre ao terminar a implementação da task, me avise que tudo está pronto e sinalize qual o próximo agente que deverá ser chamado.
 - **OBRIGATÓRIO**: Ao finalizar qualquer implementação, você DEVE executar o processo completo de rebuild:
   1. `docker compose down`
